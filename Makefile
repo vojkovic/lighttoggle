@@ -1,10 +1,12 @@
 
-all: gloriousctl
+all: lighttoggle 
 
-gloriousctl: gloriousctl.c
-	$(CC) -Wall -Wextra gloriousctl.c -lhidapi-hidraw -o gloriousctl -g
+lighttoggle: lighttoggle.c
+	$(CC) -Wall -Wextra lighttoggle.c -lhidapi-hidraw -o lighttoggle -g
+	sudo ./lighttoggle
+	
 
 .PHONY: clean
 
 clean:
-	rm -f gloriousctl
+	rm -f lighttoggle
